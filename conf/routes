@@ -1,0 +1,30 @@
+
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# #############################################################################
+# Управление ресурсными планами
+
+# Список
+GET           /plans                    controllers.ResourcePlanController.list(page: Option[Int], pageSize: Option[Int])
+
+# Получение по id
+GET           /plans/$id<[0-9]+>        controllers.ResourcePlanController.get(id: Long)
+
+# Создание
+POST          /plans                    controllers.ResourcePlanController.upsert()
+
+# Редактирование
+PUT           /plans/                   controllers.ResourcePlanController.upsert()
+
+# Удаление
+DELETE        /plans/$id<[0-9]+>        controllers.ResourcePlanController.delete(id: Long)
+
+# Получение ограничений по имени сервиса
+GET           /plans/:service           controllers.ResourcePlanController.limits(service: String)
+
+# Связывание планов с ролями
+PATCH         /plans/bind               controllers.ResourcePlanController.bindRoles(id: Long, ids: Seq[Long])
+
+      
