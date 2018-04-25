@@ -14,13 +14,12 @@ object QueryParameters {
     * @param filter фильтры
     * @param sort сортирвка
     * @param user пользователь
-    * @param public доступность
     */
   case class QueryParams(
                           page: Option[Page] = None,
                           filter: Option[Filter] = None,
                           sort: Option[Sort] = None,
-                          user : Option[User] = None,
+                          user : Option[User] = None
                         )
 
   /** запрос без параметров*/

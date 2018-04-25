@@ -3,7 +3,6 @@ package repository
 import javax.inject.Inject
 
 import models.{Limit, PlanRole, ResourcePlan}
-import models.plans.{Limit, PlanRole}
 import play.api.db.slick.{DatabaseConfigProvider, HasDatabaseConfigProvider}
 import services.SnowflakeGenerator
 import slick.driver.JdbcProfile
